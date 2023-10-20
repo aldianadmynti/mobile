@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tugasmobile/widgets/post_grid.dart';
 
-class HomeAppBar extends StatelessWidget {
+class HomeAppBar3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -11,12 +10,7 @@ class HomeAppBar extends StatelessWidget {
         children: [
           InkWell(
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => PostGrid(),
-                ),
-              );
+              Navigator.pop(context);
             },
             child: Container(
               padding: EdgeInsets.all(10),
@@ -31,7 +25,7 @@ class HomeAppBar extends StatelessWidget {
                 borderRadius: BorderRadius.circular(15),
               ),
               child: Icon(
-                Icons.grid_4x4,
+                Icons.arrow_back,
                 size: 28,
               ),
             ),
@@ -39,7 +33,7 @@ class HomeAppBar extends StatelessWidget {
           Row(
             children: [
               Text(
-                "where are you going?",
+                "Booking Now!",
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w500,

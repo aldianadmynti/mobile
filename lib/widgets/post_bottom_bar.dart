@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:tugasmobile/model/model.dart';
 
 class PostBottomBar extends StatelessWidget {
+  final Model model;
+
+  const PostBottomBar({super.key, required this.model});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -24,7 +28,7 @@ class PostBottomBar extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "Bandung, Jawa Barat",
+                      model.title,
                       style: TextStyle(
                         fontSize: 23,
                         fontWeight: FontWeight.w600,
@@ -39,7 +43,7 @@ class PostBottomBar extends StatelessWidget {
                           size: 25,
                         ),
                         Text(
-                          "4.5",
+                          model.rating.toString(),
                           style: TextStyle(
                             fontWeight: FontWeight.w600,
                           ),
@@ -50,70 +54,12 @@ class PostBottomBar extends StatelessWidget {
                 ),
                 SizedBox(height: 25),
                 Text(
-                  "Konon, asal mula nama Bandung berasal dari kata “bendung” atau “bendungan”. Dahulu kala, Sungai Citarum terbendung oleh lava yang berasal dari Gunung Tangkuban Perahu.",
+                  model.desc,
                   style: TextStyle(
                     color: Colors.black54,
                     fontSize: 16,
                   ),
                   textAlign: TextAlign.justify,
-                ),
-                SizedBox(height: 20),
-                Row(
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(right: 5),
-                      child: Expanded(
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(15),
-                          child: Image.asset(
-                            "images/city5.jpg",
-                            fit: BoxFit.cover,
-                            width: 120,
-                            height: 90,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(right: 5),
-                      child: Expanded(
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(15),
-                          child: Image.asset(
-                            "images/city4.jpg",
-                            fit: BoxFit.cover,
-                            width: 120,
-                            height: 90,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        alignment: Alignment.center,
-                        width: 120,
-                        height: 90,
-                        margin: EdgeInsets.only(right: 5),
-                        decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.circular(15),
-                          image: DecorationImage(
-                            image: AssetImage("images/city6.jpg"),
-                            fit: BoxFit.cover,
-                            opacity: 0.4,
-                          ),
-                        ),
-                        child: Text(
-                          "10+",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 23,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
                 ),
                 SizedBox(height: 15),
                 Container(
@@ -149,7 +95,7 @@ class PostBottomBar extends StatelessWidget {
                           ],
                         ),
                         child: Text(
-                          "Book Now",
+                          "Booking Now",
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 25,

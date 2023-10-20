@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:tugas/screens/welcome_screen.dart';
+import 'package:tugasmobile/screens/welcome_screen.dart';
 
 void main() {
   runApp(MyApp());

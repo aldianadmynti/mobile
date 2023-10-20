@@ -30,6 +30,17 @@ class HomeAppBar2 extends StatelessWidget {
               ),
             ),
           ),
+          Row(
+            children: [
+              Text(
+                "category",
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
+                ),
+              )
+            ],
+          ),
           InkWell(
             onTap: () {},
             child: Container(

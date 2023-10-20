@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tugas/screens/home_screen.dart';
-
+import 'package:tugasmobile/screens/home_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   @override
@@ -8,7 +7,7 @@ class WelcomeScreen extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
-        image: AssetImage("images/bg2.jpg"),
+        image: AssetImage("images/bg.jpg"),
         fit: BoxFit.cover,
         opacity: 0.7,
       )),
@@ -31,7 +30,7 @@ class WelcomeScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 2),
                 Text(
-                  "to the journey!",
+                  "to our Journey!",
                   style: TextStyle(
                     color: Colors.white.withOpacity(0.9),
                     fontSize: 35,
@@ -51,9 +50,11 @@ class WelcomeScreen extends StatelessWidget {
                 SizedBox(height: 30),
                 InkWell(
                   onTap: () {
-                    Navigator.push(context, MaterialPageRoute(
-                      builder: (context) => HomePage(),
-                    ));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => HomePage(),
+                        ));
                   },
                   child: Ink(
                     padding: EdgeInsets.all(15),
